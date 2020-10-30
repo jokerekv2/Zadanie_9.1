@@ -2,12 +2,10 @@ public class Room {
     private double size;
     private double actualTemperature;
 
-    public Room(int size, double actualTemperature) {
+    public Room(double size, double actualTemperature) {
         this.size = size;
         this.actualTemperature = actualTemperature;
     }
-
-    public void lowerTheTemperature(){}
 
     public double getSize() {
         return size;

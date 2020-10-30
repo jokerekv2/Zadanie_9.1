@@ -1,15 +1,11 @@
-public class ProAirConditionerRoom extends Room{
+public class ProAirConditionerRoom extends AirConditioner{
     private final static int MAX_TEMPERATURE = 15;
 
-    public ProAirConditionerRoom(int size, double actualTemperature) {
-        super(size, actualTemperature);
-    }
-
-    public void lowerTheTemperature() {
-        double actualTemperature = getActualTemperature();
+    public void lowerTheTemperature(Room room) {
+        double actualTemperature = room.getActualTemperature();
         if (actualTemperature > MAX_TEMPERATURE) {
             actualTemperature--;
-            setActualTemperature(actualTemperature);
+            room.setActualTemperature(actualTemperature);
         } else
             System.out.println("Limit temperatury osiągnięty.");
     }
